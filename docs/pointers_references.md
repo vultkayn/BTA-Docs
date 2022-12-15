@@ -54,10 +54,17 @@ A pointer must be explicitly attributed a value upon declaration, it cannot be d
 `@p` is an expression yielding the value of x
 
 
+## Pointer arithmetic
+
+
+
+
 ## Specificity
 
 - A pointer cannot points to an immutable variable.
-- A pointer can be reassigned
+- A pointer can be reassigned as long as its type is preserved. Otherwise, an explicit cast is mandatory.
+- Syntax `ptr2 ppx to px`, `ptr3 pppx to ppx` is considered as a way to explicitly highlight higher level pointers.
+- *Consideration* Should a pointer always be mutable so that `const` holds no meaning either? (in opposition to references)
 
 # References
 
@@ -83,11 +90,23 @@ For instance, `rx := 5` is semantically perfectly identical to `x := 5`.
 ## Specificity
 
 - A reference cannot be reassigned
-- Qualifying a reference as `const` holds no meaning.
+- Qualifying a reference as `const` holds no meaning (since it cannot be reassigned).
 - A reference can be directly used as the object it aliases.
 - A reference cannot references an immutable variable.
-- A reference is guaranteed to not outlast the object it aliases.
+- A reference is guaranteed to never outlast the object it aliases.
 - No equivalent of `nullptr` for references. A reference **must** alias something.
 
 # Vues
 
+A Vue (view in French, translated to get a 3 characters word) is a pointer over any resource, but with the guarantee of never violating any part of its contract. 
+
+## Specificity
+
+- A vue cannot be dereferenced
+- Any method not qualified as const cannot be called through a vue.
+- A vue can be taken over any immutable or mutable resources.
+
+## Alternatives
+
+`const` qualifier could be added to the above objects, such as `ptr px to const x` and `ref rx to const x` behave like a Vue, all the while retaining their particularities (e.g. such `ref` would only allow read-only operations through it).
+With the addition of a `const` qualifier, those objects could be initialized over immutable resources, considering they won't violate its invariants through dereferencement. 
