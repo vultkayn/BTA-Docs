@@ -26,8 +26,31 @@ The syntax of the casts are not that trivial in C, for those who are not natural
 
 # Type qualifiers
 
+- **Qualification syntax**
+
+Qualifiers should not lead to confusion with types whatsoever.
+Therefore, a syntaxic distinction might be welcomed to help distinguish between the two semantics.
+
+Thereby is proposed the following construct:
+
+**DECL** $\rightarrow$ **TYPE** **QUALIFIERS_LIST** *name* [ **$:=$** *value* ]
+**QUALIFIERS_LIST** $\rightarrow$ **{** **QUALIFIER** **,** **}** | $\epsilon$
+
+**QUALIFIER** $\rightarrow$ **mut** | **volatile**
+
+<u>Example</u>
+
+```
+int{mut, volatile} x;
+ptr{mut} p to y;
+```
+
+
 ### Considerations
 
-- **Default object mutability**: Should the constness of an object be expected by default, hence mutability be an explicit request from the user (as in Rust) ? Or should the default behavior be that of C ?
+- **Constness**
+
+Constness of an object if the default behavior. Mutability should be an explicit property.
+
 
 - **Deduction of a dynamic variable implicit type at initialization from an explicitly-typed one**

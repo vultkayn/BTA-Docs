@@ -4,9 +4,24 @@ Operators can be overloaded.
 
 ## Unary arithmetic
 
+`-` and `+` prefix operators.
+
+### Errors
+
 ## Unary bitwise operations
 
+
+
 ## Binary arithmetic operations
+
+`-` and `+` in-between two values of strictly identical types.
+
+
+## Exponent
+
+### Errors
+
+- Exponentiation `0` or `0.0` with a negative exponent should return a `TypeValueError`
 
 
 
@@ -46,3 +61,11 @@ In such event, should the binary bitwise operations be reviewed to take a higher
 
 # Operator overloading
 
+Operators probably should be overloadable, so that its semantic can be retained even within a user defined class.
+
+An overload
+
+## Binary operators arguments type compatibility
+
+- Either both expressions are evaluated to a stricly identical type.
+- Or maybe define an explicit workaround for any type that matches certain collection of traits.
