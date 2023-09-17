@@ -7,7 +7,29 @@ BTA's types are
 
 # Built in types
 
+## Numbers
 
+### Characters
+
+char, string
+
+### Logical
+
+logic
+
+### Integers
+
+i16, i32, i64, u16, u32, u64, isize, usize
+
+### Floating point
+
+f32, f64
+
+### Complex type
+
+Pairs of the above
+
+### Array
 
 
 # Type Casting
@@ -15,6 +37,7 @@ BTA's types are
 Casting in C is not always clear, as the precedence of operators can confuse the learner.
 
 Take for instance the following casts
+
 ```c
 (int *) a[2]; // 1. Array a is first indexed, and that value is then casted
 (int *) (a[2]); // 2. equivalent to 1

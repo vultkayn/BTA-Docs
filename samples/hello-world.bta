@@ -1,0 +1,5 @@
+def main () -> int
+{
+  print ("Hello world!"); # { exp-message "Hello world!\n" }
+  return 0; # optional for main
+}

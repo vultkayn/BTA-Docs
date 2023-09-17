@@ -1,6 +1,8 @@
 # Definition
 
-def fonctionName 
+```antlr4
+FUNCTION_DECL := def IDENTIFIER '(' PARAMS_LIST ')' ('{' FN_BODY '}' | ';')
 
+CLASS_BODY := (VISIB DECL_LIST)+
+```
 
-#

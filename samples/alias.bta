@@ -1,0 +1,5 @@
+alias i64 as long long;
+alias i32 as long;
+
+let x: i32 = 0;
+alias x as rx; # rx is a reference of x;

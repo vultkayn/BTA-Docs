@@ -1,0 +1,42 @@
+def basics ()
+{
+  let add: mut i64 = 0;
+  add += 9;
+  add **= 2; # power of two
+  add %= 2; # modulo
+  add -= 9; # substract
+  add *= 2; # multiply
+  add /= 2; # divide
+
+  add = add + 9;
+  add = add - 9;
+  add = add * 9;
+  add = add / 9;
+  add = add % 9;
+  add = add ** 9;
+}
+
+def increment ()
+{
+  mut i64 i := 0;
+  i++;
+  i--;
+  ++i;
+  --i;
+}
+
+def types ()
+{
+  mut logic b := null; // false, bool, unknown
+  mut byte m := null;
+  mut i16 x := null;
+  mut i32 i := null;
+  mut i64 j := null;
+  mut u16 X := null;
+  mut u32 I := null;
+  mut u64 J := null;
+  mut f32 f := null;
+  mut f64 F := null;
+
+  byte m := null; # { exp-error "immutable variable 'm' cannot be 'null'" }
+}

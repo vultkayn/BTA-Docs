@@ -1,9 +1,23 @@
-## Variable initialization
+# Variable initialization
 
-The assignement of a variable should use an assymetric relation operator, since for the beginner, the equal sign `=` has a mathematical connotation, thus they might not see the distinction between `5 = x` and `x = 5`, whereas `x <- 5` leaves no ambiguity.
+```antlr4
+VAR_DECL := let IDENTIFIER ':' TYPE_QUALIFIERS TYPE_IDENTIFIER '=' EXPR ';'
+TYPE_QUALIFIERS := [mut]
+TYPE_IDENTIFIER := BUILTIN_TYPE | any | IDENTIFIER
+```
 
-`TYPE x := 5`
+# Variable assignment
 
-## Variable assignment
+`x = 5`
 
-`x := 5`
+# Macros
+
+
+```antlr4
+MACRO_IDENTIFIER := '$' IDENTIFIER
+```
+
+**Examples**
+
+- `$unreachable ()`: If control flow ever reach this point, then throw  
+- $print
