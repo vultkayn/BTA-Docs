@@ -1,0 +1,18 @@
+docs:
+  - title: "Quick-Start Guide"
+    children:
+      - title: "Installation"
+        url: /installation
+  - title: "Common Programming Concepts"
+    children:
+      - title: "Types"
+        url: /common/typing
+      - title: "Functions"
+        url: /common/functions
+      - title: "Operators"
+        url: /common/operators
+  - title: "Memory management"
+    children:
+      - title: "A new take at pointers"
+        url: /memory/pointers
+

@@ -1,6 +1,20 @@
+---
+title: Operators
+permalink: /common/operators
+---
+
 Operators can be overloaded.
 
-# Expressions
+## Expressions
+
+```
+expr: expr BIN_OP expr
+  | ('-' | '~' | '--' | '++') expr
+  | expr ('--' | '++')
+
+BIN_OP: '+' | '-' | '*' | '/' | '**' | '%'
+  | '^' | '&' | '|'
+```
 
 ## Unary arithmetic
 

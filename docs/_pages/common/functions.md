@@ -1,3 +1,9 @@
+---
+title: Functions
+permalink: /common/functions
+---
+
+
 # Definition
 
 ```antlr4
