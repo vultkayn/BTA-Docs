@@ -1,6 +1,5 @@
 ---
 title: Functions
-permalink: /common/functions
 ---
 
 

@@ -1,5 +1,6 @@
 ---
-permalink: /memory/pointers
+title: Pointers & References
+permalink: /docs/memory/pointers
 ---
 
 # Pointers & References

@@ -1,6 +1,5 @@
 ---
 title: Typing
-permalink: /common/typing
 ---
 
 BTA's type system is mostly static.

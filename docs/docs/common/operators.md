@@ -1,6 +1,5 @@
 ---
 title: Operators
-permalink: /common/operators
 ---
 
 Operators can be overloaded.
